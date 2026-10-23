@@ -1,1 +1,3 @@
-
+print ('hello world')
+print ('escriu la teva edat')
+input(67)
