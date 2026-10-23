@@ -1,3 +1,6 @@
-print ('hello world')
-print ('escriu la teva edat')
-input(67)
+print("Hola mundo")
+nom= input("introdueix el teu nom: ")
+print("Hola ", nom)
+
+edat= input("introdueix quan vas neixer: ")
+print("Tens ", 2026 - int(edat), " anys")
