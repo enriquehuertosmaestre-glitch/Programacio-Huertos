@@ -17,9 +17,9 @@ else:
     if(suma < 8 and suma > 4):
      print("La suma es menor que 8 i major que 4")
 
-else:
-    if not (suma == 13):
-        print("La suma no és 13")
+    else:
+        if not (suma == 13):
+            print("La suma no és 13")
     if(suma == 15):
         print("La suma és 15")
     

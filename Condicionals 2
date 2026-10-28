@@ -1,1 +1,33 @@
+print("")
 
+n1=(input("introdueix un numero: "))
+n2=(input("introdueix un altre numero: "))
+
+print("1. Suma, 2. Resta, 3. Multiplicació, 4. Divisió, 5. Divisió entera, 6. Modulo, 7. Potencia")
+
+option = int(input("Selecciona una opció: "))
+
+if option == 1:
+    print("Quina suma vols, A. n1 + n2 o B. n2 + n1?")
+    if option == A:
+        print("La suma dels dos numeros es: ", int(n1)+int(n2))
+    if option == B:
+        print("La suma dels dos numeros es: ", int(n2)+int(n1))
+
+elif option == 2:
+    print("La resta dels dos numeros es: ", int(n1)-int(n2))
+
+elif option == 3:
+    print("La multiplicació dels dos numeros es: ", int(n1)*int(n2))
+
+elif option == 4:
+    print("La divisió dels dos numeros es: ", int(n1)/int(n2))
+
+elif option == 5:
+    print("La divisió entera dels dos numeros es: ", int(n1)//int(n2))
+
+elif option == 6:
+    print("El modulo dels dos numeros es: ", int(n1)%int(n2))
+
+elif option == 7:
+    print("La potencia dels dos numeros es: ", int(n1)**int(n2))    
