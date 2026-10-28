@@ -18,12 +18,6 @@ else:
      print("La suma es menor que 8 i major que 4")
 
 else:
-    if(suma < 12 or suma > 18):
-        print("La suma es menor que 12 o major que 18")
-    if(suma > 12 and suma < 18):
-        print("La suma es major que 12 i menor que 18")
-
-else:
     if not (suma == 13):
         print("La suma no és 13")
     if(suma == 15):
