@@ -8,7 +8,7 @@ print("1. Suma, 2. Resta, 3. Multiplicació, 4. Divisió, 5. Divisió entera, 6.
 option = int(input("Selecciona una opció: "))
 
 if option == 1:
-    print("Quina suma vols, A." + n1 + " o B. " + n2 + " + " + n1 + "?")
+    print("Quina suma vols, A." + n1 + " + " + n2 + " o B." + n2 + " + " + n1 + "?")
     option = input("Selecciona una opció: ")
     if option == "A":
         print("La suma dels dos numeros es: ", int(n1)+int(n2))
@@ -60,7 +60,7 @@ elif option == 6:
         print("El modulo dels dos numeros es: ", int(n2)%int(n1))
     if int(n2) == 0 or int(n1) == 0:
         print("No es pot dividir per 0")
-        
+
 elif option == 7:
     print("Quina potencia vols, A. " + n1 + " ** " + n2 + " o B. " + n2 + " ** " + n1 + "?")
     option = input("Selecciona una opció: ")
