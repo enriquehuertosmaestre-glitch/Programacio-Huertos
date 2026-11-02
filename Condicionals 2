@@ -68,5 +68,7 @@ elif option == 7:
         print("La potencia dels dos numeros es: ", int(n1)**int(n2))
     if option == "B":
         print("La potencia dels dos numeros es: ", int(n2)**int(n1))
+    if int(n2) == 0 or int(n1) == 0:
+        print("La potencia de qualsevol numero elevat a 0 és 1")
 
 print("")
