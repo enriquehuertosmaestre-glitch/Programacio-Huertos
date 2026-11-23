@@ -8,7 +8,7 @@ secret_code=[]
 
 for i in range(longitud):
     secret_code.append(random.choice(colors))
-    
+
 print("Benvingut al Mastermind!")
 print("Tens", intents, "intents per endevinar el codi secret.")
 print("El codi secret està format per", longitud, "colors. Els colors possibles són: V (Vermell), B (Blau), G (groc), E (Verd), T (Taronja), L (Lila).")
@@ -30,11 +30,20 @@ while intentactual <= intents and not guanyat:
         if entrada_correcta:
             correct_pos=0
             correct_color=0
+            secret_restant=[]
+            guess_restant=[]
             for i in range(longitud):
                 if guess[i] == secret_code[i]:
                     correct_pos += 1
-                elif guess[i] in secret_code:
-                    correct_color += 1
+                else:
+                    secret_restant.append(secret_code[i])
+                    guess_restant.append(guess[i])
+                
+                for color in guess_restant:
+                    if color in secret_restant:
+                        correct_color += 1
+                        secret_restant.remove(color)
+                    
             print("Resultat: " + "o" * correct_pos + "·" * correct_color + "x" * (longitud - correct_pos - correct_color))
             if correct_pos == longitud:
                 guanyat=True
