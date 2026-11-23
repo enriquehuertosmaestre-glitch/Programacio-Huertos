@@ -1,1 +1,51 @@
+print("")
 
+import random
+colors=["V","B","G","E","T","L"]
+intents=10
+longitud=4
+secret_code=[]
+
+for i in range(longitud):
+    secret_code.append(random.choice(colors))
+    
+print("Benvingut al Mastermind!")
+print("Tens", intents, "intents per endevinar el codi secret.")
+print("El codi secret està format per", longitud, "colors. Els colors possibles són: V (Vermell), B (Blau), G (groc), E (Verd), T (Taronja), L (Lila).")
+print("Es mostrarà el color correcte en posició correcte 'o' per a un color correcte en posició incorrecta '·', i per un color incorrecte 'x'.")
+
+intentactual=1
+guanyat=False
+while intentactual <= intents and not guanyat:
+    entrada_correcta=False
+    while not entrada_correcta:
+        guess=input("Introdueix el teu intent (4 colors): ").upper()
+        if len(guess) != longitud:
+            print("El codi ha de tenir exactament", longitud, "colors.")
+        elif any(c not in colors for c in guess):
+            print("Els colors introduïts no són vàlids. Els colors possibles són: V, B, G, E, T, L.")
+        else:
+            entrada_correcta=True
+        
+        if entrada_correcta:
+            correct_pos=0
+            correct_color=0
+            for i in range(longitud):
+                if guess[i] == secret_code[i]:
+                    correct_pos += 1
+                elif guess[i] in secret_code:
+                    correct_color += 1
+            print("Resultat: " + "o" * correct_pos + "·" * correct_color + "x" * (longitud - correct_pos - correct_color))
+            if correct_pos == longitud:
+                guanyat=True
+                print("Felicitats! Has endevinat el codi secret:", ''.join(secret_code))
+            else:
+                intentactual += 1
+                print("Et queden", intents - intentactual + 1, "intents.")
+            if intentactual > intents and not guanyat:
+                print("Ho sento, has esgotat els intents. El codi secret era:", ''.join(secret_code))
+
+            
+
+
+   
